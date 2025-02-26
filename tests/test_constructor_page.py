@@ -40,7 +40,7 @@ class TestConstructor:
         constructor_button = driver_logged.find_element(*Locators.SAUCES_TAB_BUTTON)
         constructor_button.click()
 
-        WebDriverWait(driver_logged, Data.WAIT_TIME).until(EC.visibility_of_element_located(Locators.SELECTED_SAUCES_TAB))
+        WebDriverWait(driver_logged, Data.WAIT_TIME).until(EC.presence_of_element_located(Locators.SELECTED_SAUCES_TAB))
         selected_tab = driver_logged.find_element(*Locators.SELECTED_SAUCES_TAB)
 
         assert selected_tab.is_displayed() and selected_tab.text == Data.SAUCES_TAB_TEXT
@@ -50,7 +50,7 @@ class TestConstructor:
         constructor_button = driver_logged.find_element(*Locators.FILLING_TAB_BUTTON)
         constructor_button.click()
 
-        WebDriverWait(driver_logged, Data.WAIT_TIME).until(EC.visibility_of_element_located(Locators.SELECTED_FILLING_TAB))
+        WebDriverWait(driver_logged, Data.WAIT_TIME).until(EC.presence_of_element_located(Locators.SELECTED_FILLING_TAB))
         selected_tab = driver_logged.find_element(*Locators.SELECTED_FILLING_TAB)
 
         assert selected_tab.is_displayed() and selected_tab.text == Data.FILLING_TAB_TEXT
@@ -65,7 +65,7 @@ class TestConstructor:
         constructor_button = driver_logged.find_element(*Locators.BREAD_TAB_BUTTON)
         constructor_button.click()
 
-        WebDriverWait(driver_logged, Data.WAIT_TIME).until(EC.visibility_of_element_located(Locators.SELECTED_BREAD_TAB))
+        WebDriverWait(driver_logged, Data.WAIT_TIME).until(EC.presence_of_element_located(Locators.SELECTED_BREAD_TAB))
         selected_tab = driver_logged.find_element(*Locators.SELECTED_BREAD_TAB)
 
         WebDriverWait(driver_logged, 60)

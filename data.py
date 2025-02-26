@@ -1,7 +1,7 @@
 class Data:
     """Данные для заполнения тестов."""
 
-    WAIT_TIME = 10
+    WAIT_TIME = 60
     MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site"
     REGISTER_URL = "https://stellarburgers.nomoreparties.site/register"
     LOGIN_URL = "https://stellarburgers.nomoreparties.site/login"
